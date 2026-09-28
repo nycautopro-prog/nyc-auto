@@ -194,7 +194,6 @@ function applyLanguage(lang){
   setText('#mainNav a[href="#sources"]','Data Sources','Fuentes de Datos');
   setText('.topcta','Get Your Report','Obtener Reporte');
   setText('.hero .eyebrow','VEHICLE HISTORY • SAFETY • BUYER INTELLIGENCE','HISTORIAL • SEGURIDAD • INTELIGENCIA DE COMPRA');
-  setText('.hero h1','Know the Car. Before You Buy.','Conoce el Vehículo. Antes de Comprar.');
   setText('.hero-copy>p','Decode the VIN free, research matching recall campaigns, preview professional vehicle data, and upgrade when you need deeper history, photos, market guidance and buyer analysis.','Decodifica el VIN gratis, revisa campañas de recall y obtén un reporte más completo cuando necesites historial, fotos, mercado y análisis de compra.');
   if($('#vin')) $('#vin').placeholder=currentLang==='es'?'Ingresa VIN de 17 caracteres':'Enter 17-character VIN';
   setText('#vinForm button','Check VIN Free','Revisar VIN Gratis');
