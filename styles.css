@@ -45,3 +45,47 @@
 .hero:after{content:"FREE VIN + RECALL";position:absolute;right:4vw;bottom:18px;color:#8cc8ff18;font-size:46px;font-weight:1000;letter-spacing:3px;z-index:1;pointer-events:none}
 @media(max-width:900px){.free-wrap,.free-results{grid-template-columns:1fr}.free-copy h2{font-size:35px}}
 @media(max-width:620px){.free-check{padding:50px 18px}.free-vin-row{display:block}.free-vin-row input,.free-vin-row .btn{width:100%;border:1px solid #c7d6e3;border-radius:7px;margin:3px 0}.fact-grid{grid-template-columns:1fr}.recall-item-top{display:block}.recall-item .campaign{display:inline-block;margin-top:7px}.hero:after{display:none}}
+
+/* Premium visual upgrade */
+.brand-showcase{background:#061a2f;color:#fff;padding:34px 5vw 38px;border-top:1px solid #163853;border-bottom:1px solid #163853}
+.brand-showcase-head{max-width:1300px;margin:0 auto 22px;display:flex;justify-content:space-between;gap:30px;align-items:end}
+.brand-showcase-head span{color:#1a8fff;font-size:10px;letter-spacing:1.8px;font-weight:900}
+.brand-showcase-head h2{margin:5px 0 0;font-size:26px}
+.brand-showcase-head p{max-width:480px;color:#9fb4c7;font-size:11px;margin:0}
+.brand-grid{max-width:1300px;margin:auto;display:grid;grid-template-columns:repeat(10,1fr);gap:9px}
+.brand-logo{min-width:0;background:linear-gradient(180deg,#0c2a46,#081f35);border:1px solid #214864;border-radius:11px;padding:13px 7px;text-align:center;transition:.2s ease;box-shadow:inset 0 1px 0 #ffffff08}
+.brand-logo:hover{transform:translateY(-3px);border-color:#2b8be2;box-shadow:0 10px 24px #0004}
+.brand-logo img{width:31px;height:31px;object-fit:contain;display:block;margin:0 auto 7px;opacity:.95}
+.brand-logo b{display:block;color:#dbe8f3;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.premium-preview{overflow:hidden}
+.preview-main{height:218px;border-radius:9px;overflow:hidden;background:#081a2d}
+.preview-main img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.premium-preview:hover .preview-main img{transform:scale(1.025)}
+.preview-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:8px 0 14px}
+.preview-thumbs img{width:100%;height:62px;object-fit:cover;border-radius:7px;border:1px solid #d7e3ee}
+.preview-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.preview-meta div{background:#f4f8fc;border:1px solid #e0e8ef;border-radius:7px;padding:9px}
+.preview-meta span{display:block;color:#6f8090;font-size:9px;text-transform:uppercase;letter-spacing:.5px}
+.preview-meta b{font-size:10px;color:#173149}
+
+.pro-section{padding:72px 5vw;background:linear-gradient(180deg,#ffffff,#edf5fb)}
+.pro-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.pro-grid article{background:#fff;border:1px solid #dbe6ef;border-radius:13px;padding:23px;box-shadow:0 12px 30px #173f5e10}
+.pro-grid h3{margin:11px 0 8px;font-size:17px}
+.pro-grid p{margin:0;color:#637689;font-size:12px}
+.pro-icon{width:44px;height:44px;border-radius:11px;background:#eaf5ff;display:grid;place-items:center;font-size:22px}
+
+.hero{min-height:660px}
+.hero:before{opacity:.5;filter:saturate(1.08) contrast(1.05)}
+.hero-overlay{background:linear-gradient(90deg,#031426 0,#031426f6 31%,#031426c7 52%,#03142662 100%)}
+.hero h1{font-size:72px;max-width:780px}
+.hero-copy>p{max-width:760px}
+.glass-card{backdrop-filter:blur(10px);background:#071d32d9}
+.free-tool-card,.car-card,.data-card,.helpgrid article,.sourcegrid article,.orderform{border-color:#d3e0eb}
+.plan{transition:transform .2s ease,box-shadow .2s ease}
+.plan:hover{transform:translateY(-4px);box-shadow:0 24px 55px #0004}
+.plan.featured:hover{transform:translateY(-12px)}
+@media(max-width:1180px){.brand-grid{grid-template-columns:repeat(5,1fr)}}
+@media(max-width:800px){.brand-showcase-head{display:block}.brand-showcase-head p{margin-top:10px}.pro-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.brand-grid{grid-template-columns:repeat(2,1fr)}.pro-grid{grid-template-columns:1fr}.hero h1{font-size:49px}.preview-meta{grid-template-columns:1fr}}
