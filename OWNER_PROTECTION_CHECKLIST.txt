@@ -1,0 +1,19 @@
+NYC AUTO PRO — PRE-LAUNCH OWNER PROTECTION CHECKLIST
+
+This checklist reduces avoidable risk but cannot eliminate the possibility of a customer claim or lawsuit.
+
+[ ] Form a proper business entity and keep business/personal finances separate.
+[ ] Ask a New York-licensed attorney to review Terms, Privacy, Refund and Disclaimer pages.
+[ ] Require Terms/Privacy/Refund/Disclaimer acceptance before checkout.
+[ ] Keep records of the exact report delivered and data-provider responses for each order.
+[ ] Carry appropriate business/general liability and cyber/privacy insurance if advised.
+[ ] Use written commercial contracts for CARFAX, AutoCheck, NMVTIS providers, auction data and photos.
+[ ] Never claim “no accidents,” “clean title,” “no recalls,” or similar unless a reliable source actually confirms the specific fact.
+[ ] Distinguish “no record found” from “did not happen.”
+[ ] Always recommend independent inspection, title/lien verification and VIN-specific recall confirmation.
+[ ] Do not copy or re-host third-party photos unless your license permits it.
+[ ] Keep API keys on a server, never in browser JavaScript.
+[ ] Use Stripe or another compliant payment processor; never store full card numbers.
+[ ] Publish a support contact and documented refund process.
+[ ] Maintain security logs, backups, least-privilege access and incident-response procedures.
+[ ] Update policies when business practices or connected data providers change.
