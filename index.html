@@ -1,11 +1,264 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NYC Auto Pro | Smart Vehicle Reports</title><link rel="stylesheet" href="styles.css"></head><body>
-<header><div class="logo">NYC <span>AUTO PRO</span><small>SMART VEHICLE REPORTS & BUYER GUIDANCE</small></div><nav><a href="#home">Home</a><a href="#sample">Sample Report</a><a href="#pricing">Pricing</a><a href="#how">How It Works</a></nav><a class="btn" href="#vin">Get Your Report</a></header>
-<section class="hero" id="home"><div><b class="blue">SMARTER USED-CAR BUYING</b><h1>Buy Smarter.<br>Drive Safer.</h1><p>Get vehicle information, clear analysis and buyer guidance before you make a purchase.</p><div class="checks">✓ Vehicle Data　✓ Recall Check　✓ Buyer Guidance</div><form id="vin"><input id="vinInput" maxlength="17" placeholder="Enter 17-character VIN"><button>Get Report</button></form><small id="msg">Secure • Fast • Easy to understand</small></div><div class="visual"><div class="car">🚘</div><aside><b>Professional Reports</b><br>Vehicle information<br>Seller questions<br>Items to verify<br>Inspection guidance</aside></div></section>
-<section class="sample" id="sample"><div class="intro"><div><b class="blue">SEE WHAT YOU GET</b><h2>Sample Report</h2><p>A clean report designed to make vehicle information easier to understand.</p></div></div><div class="reports">
-<article><b>NYC <span>AUTO PRO</span></b><small>VEHICLE REPORT</small><div class="vehicle">🚙</div><h3>2023 BMW M440i xDrive</h3><p>VIN: WBA13AR0XPCM17068</p><em>SAMPLE REPORT</em></article>
-<article><h3>Vehicle Information</h3><p>Make　<b>BMW</b></p><p>Model　<b>M440i xDrive</b></p><p>Year　<b>2023</b></p><p>Body　<b>Coupe</b></p><p>Engine　<b>3.0L 6-cylinder</b></p><small>Example layout. Verify live data before purchase.</small></article>
-<article><h3>Buyer Review</h3><p>✓ VIN identity</p><p>○ Recall lookup</p><p>○ Title/history verification</p><p>○ Independent inspection</p><small>Confirmed and unavailable information should always be distinguished.</small></article>
-<article><h3>Questions to Ask</h3><p>Any prior collision repairs?</p><p>Can I see maintenance records?</p><p>Is the title in the seller's name?</p><p>Can I arrange an inspection?</p><em>BUYER GUIDANCE</em></article></div></section>
-<section class="pricing" id="pricing"><div class="title"><b class="blue">SIMPLE PRICING</b><h2>Choose Your Report</h2></div><div class="plans"><article><h3>Basic VIN Check</h3><strong>$9.99</strong><p>Vehicle identification<br>Recall information<br>Basic buyer checklist</p><a href="#vin">Start</a></article><article class="hot"><label>MOST POPULAR</label><h3>AI Buyer Report</h3><strong>$19.99</strong><p>Everything in Basic<br>Plain-language analysis<br>Seller questions & red flags</p><a class="btn" href="#vin">Start</a></article><article><h3>Complete Buyer Package</h3><strong>$29.99</strong><p>Everything in AI Report<br>Listing/price review<br>Inspection checklist</p><a href="#vin">Start</a></article></div></section>
-<section class="how" id="how"><div class="title"><b class="blue">FAST & SIMPLE</b><h2>How It Works</h2></div><div class="steps"><article><i>1</i><h3>Enter VIN</h3><p>Submit the 17-character VIN.</p></article><article><i>2</i><h3>We Analyze</h3><p>Available data is organized and explained.</p></article><article><i>3</i><h3>Get Your Report</h3><p>Review findings and buyer guidance.</p></article></div></section>
-<footer><b>NYC <span>AUTO PRO</span></b><p>Vehicle information & buyer advisory service.</p><small>Reports are informational and do not guarantee vehicle condition, title status, or absence of undisclosed issues. Verify important records and obtain an independent inspection before purchase.</small></footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NYC Auto Pro | Vehicle Reports, Recall Data & Buyer Guidance</title>
+  <meta name="description" content="NYC Auto Pro helps used-car buyers review VIN details, free recall data, public photo searches, vehicle information and buyer guidance.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://vpic.nhtsa.dot.gov https://api.nhtsa.gov; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+  <link rel="icon" href="assets/logo-mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="NYC Auto Pro home">
+    <img src="assets/logo-mark.svg" alt="">
+    <span><strong>NYC <b>AUTO PRO</b></strong><small>VEHICLE REPORTS • PHOTOS • MARKET DATA</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#sample">Sample Report</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#buyer-help">Buying Help</a>
+    <a href="#sources">Data Sources</a>
+  </nav>
+  <a class="primary top-cta" href="#order">Get Your Report</a>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">VEHICLE HISTORY REPORTS & MARKET DATA</div>
+      <h1>Buy Smarter.<br><span>Drive Safer.</span></h1>
+      <p>Review vehicle details, safety recall campaigns, public photo searches, market information and expert buyer guidance — all in one place before you buy a used car.</p>
+      <div class="hero-pills">
+        <span>✓ VIN Data</span><span>✓ Free Recall Data</span><span>✓ Public Photo Search</span><span>✓ Buyer Guidance</span>
+      </div>
+      <form class="vin-hero" id="heroVinForm">
+        <input id="heroVin" maxlength="17" autocomplete="off" placeholder="Enter 17-character VIN (e.g. WBA13AR0XPCM17068)" aria-label="Vehicle VIN">
+        <button class="primary" type="submit">Check Vehicle</button>
+      </form>
+      <div class="micro">🔒 No credit card required for the free recall lookup • Results depend on available data</div>
+    </div>
+    <div class="hero-media">
+      <img src="assets/hero-car.jpg" alt="Used vehicle with New York City skyline">
+      <div class="feature-panel">
+        <div><i>✓</i><span><b>VIN Data</b><small>Decode key vehicle details</small></span></div>
+        <div><i>✓</i><span><b>Free Recall Data</b><small>NHTSA recall campaigns</small></span></div>
+        <div><i>✓</i><span><b>Buyer Guidance</b><small>Questions, tips and red flags</small></span></div>
+        <div><i>✓</i><span><b>Public Photos</b><small>Search public web listings</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="icon-strip">
+  <div><span>🚘</span><b>Vehicle Data</b><small>Build, specs & identifiers</small></div>
+  <div><span>📄</span><b>History Data</b><small>When licensed sources are connected</small></div>
+  <div><span>📷</span><b>Public Photos</b><small>Search listing photos on the public web</small></div>
+  <div><span>⚠️</span><b>Recall Lookup</b><small>NHTSA campaign information</small></div>
+  <div><span>📊</span><b>Market Guidance</b><small>Pricing context when available</small></div>
+  <div><span>🛡️</span><b>Buyer Protection</b><small>Independent inspection guidance</small></div>
+</section>
+
+<section class="recall-section" id="recalls">
+  <div class="section-title light-title">
+    <span>FREE TOOL</span>
+    <h2>Free Recall & VIN Check</h2>
+    <p>Decode the VIN and review NHTSA safety recall campaigns for the decoded year, make and model.</p>
+  </div>
+  <div class="recall-card">
+    <form id="recallForm" class="recall-form">
+      <label>17-character VIN</label>
+      <div class="input-row">
+        <input id="recallVin" maxlength="17" autocomplete="off" placeholder="Enter VIN">
+        <button class="green-btn" type="submit">Check Recalls Free</button>
+      </div>
+      <small>This free tool uses public NHTSA/vPIC data. It does not replace a VIN-specific open-recall confirmation by a dealer or NHTSA's official recall search.</small>
+    </form>
+    <div id="recallResult" class="recall-result">
+      <div class="empty-state">
+        <div class="big-icon">🛡️</div>
+        <b>Enter a VIN to begin</b>
+        <p>Vehicle details and matching recall campaigns will appear here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sample-section" id="sample">
+  <div class="section-title">
+    <span>SAMPLE REPORT</span>
+    <h2>See What You Get</h2>
+    <p>This demo shows the layout and type of information a report can include. Unverified sample fields are clearly labeled.</p>
+  </div>
+  <div class="sample-grid">
+    <article class="vehicle-card">
+      <div class="sample-tag">DEMO REPORT</div>
+      <h3>2023 BMW M440i xDrive</h3>
+      <p class="vin-text">VIN: WBA13AR0XPCM17068</p>
+      <img src="assets/sample-car.jpg" alt="Sample BMW vehicle">
+      <div class="thumbs"><span>📷 Public photos</span><span>🔎 Listing search</span></div>
+    </article>
+    <article class="report-card">
+      <h3>🚘 Vehicle Information</h3>
+      <dl><dt>Make</dt><dd>BMW</dd><dt>Model</dt><dd>M440i xDrive</dd><dt>Year</dt><dd>2023</dd><dt>Body</dt><dd>Coupe</dd><dt>Engine</dt><dd>3.0L 6-cylinder</dd><dt>Drivetrain</dt><dd>AWD</dd></dl>
+      <small>Vehicle decoding details should be verified against manufacturer/NHTSA data.</small>
+    </article>
+    <article class="report-card">
+      <h3>🧾 Buyer Review</h3>
+      <ul class="checklist">
+        <li>Verify title and lien status</li>
+        <li>Review recall campaigns</li>
+        <li>Compare mileage records</li>
+        <li>Check available service records</li>
+        <li>Search public listing/auction photos</li>
+        <li>Arrange an independent inspection</li>
+      </ul>
+      <a class="secondary full" href="sample-report.html">View Full Sample Report →</a>
+    </article>
+    <article class="report-card">
+      <h3>💬 Questions to Ask Seller</h3>
+      <ul class="blue-list">
+        <li>Can you show maintenance records?</li>
+        <li>Has the vehicle had collision repairs?</li>
+        <li>Are there open recalls?</li>
+        <li>Is the title in your name?</li>
+        <li>Are there any liens?</li>
+        <li>Can I arrange a pre-purchase inspection?</li>
+      </ul>
+      <a class="secondary full" href="#buyer-help">More Buyer Help →</a>
+    </article>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="section-title dark-title">
+    <span>SIMPLE PRICING</span>
+    <h2>Choose Your Report</h2>
+    <p>Low introductory pricing designed to make professional buyer guidance accessible.</p>
+  </div>
+  <div class="price-grid">
+    <article class="price-card free">
+      <div class="ribbon green">FREE</div><h3>Free Recall Check</h3><strong>$0</strong>
+      <ul><li>VIN decode</li><li>NHTSA recall campaigns</li><li>Basic vehicle details</li><li>Official verification links</li></ul>
+      <a href="#recalls" class="green-btn full">Check Recalls Free →</a>
+    </article>
+    <article class="price-card">
+      <h3>Basic Vehicle Report</h3><strong>$4.99</strong>
+      <ul><li>Everything in Free</li><li>Buyer checklist</li><li>Title/history fields when available</li><li>Public photo search links</li><li>Equipment/spec review</li></ul>
+      <button class="secondary full order-btn" data-plan="Basic Vehicle Report - $4.99">Get Basic Report →</button>
+    </article>
+    <article class="price-card featured">
+      <div class="ribbon">MOST POPULAR</div><h3>Smart Buyer Report</h3><strong>$8.99</strong>
+      <ul><li>Everything in Basic</li><li>Detailed buyer risk review</li><li>Auction/listing data when licensed</li><li>Market guidance</li><li>Seller questions & negotiation tips</li></ul>
+      <button class="primary full order-btn" data-plan="Smart Buyer Report - $8.99">Get Smart Report →</button>
+    </article>
+    <article class="price-card">
+      <h3>Complete Buyer Report</h3><strong>$14.99</strong>
+      <ul><li>Everything in Smart</li><li>Extended licensed history data</li><li>Auction photos when licensed</li><li>Maintenance/service fields</li><li>Detailed buying guidance</li></ul>
+      <button class="dark-btn full order-btn" data-plan="Complete Buyer Report - $14.99">Get Complete Report →</button>
+    </article>
+  </div>
+  <p class="pricing-note">Third-party paid data (including CARFAX, AutoCheck, NMVTIS-provider or auction data) will only be included after NYC Auto Pro has the required commercial authorization and may affect future pricing.</p>
+</section>
+
+<section class="buyer-help" id="buyer-help">
+  <div class="section-title">
+    <span>AI BUYING HELP</span><h2>Guidance for a Smarter Purchase</h2>
+    <p>Use the assistant for practical questions about inspections, negotiations, titles, recalls and used-car buying.</p>
+  </div>
+  <div class="help-grid">
+    <article><span>💬</span><h3>Seller Questions</h3><p>Get a checklist of questions based on the vehicle and what you still need to verify.</p><button class="ask-ai" data-question="What questions should I ask a used-car seller?">Ask Assistant</button></article>
+    <article><span>🔧</span><h3>Inspection Suggestions</h3><p>Know what to inspect during a test drive and what a mechanic should verify.</p><button class="ask-ai" data-question="Give me a used-car inspection checklist.">Inspection Help</button></article>
+    <article><span>💲</span><h3>Negotiation Tips</h3><p>Use documented issues and comparable pricing as negotiation points.</p><button class="ask-ai" data-question="How should I negotiate a used-car price?">Negotiation Help</button></article>
+    <article><span>📑</span><h3>Title & Mileage</h3><p>Learn what records to verify before paying for the vehicle.</p><button class="ask-ai" data-question="What title and mileage records should I verify?">Title Guide</button></article>
+    <article><span>⚠️</span><h3>What to Avoid</h3><p>Review common red flags, title problems and seller warning signs.</p><button class="ask-ai" data-question="What red flags should I avoid when buying a used car?">Red Flags</button></article>
+    <article><span>💡</span><h3>Buying Suggestions</h3><p>Get practical next steps after reviewing the report.</p><button class="ask-ai" data-question="Give me a safe used-car buying plan.">Buying Tips</button></article>
+  </div>
+</section>
+
+<section class="photo-section">
+  <div class="photo-copy">
+    <span class="section-kicker">PUBLIC PHOTO SEARCH</span>
+    <h2>Look for Publicly Available Vehicle Photos</h2>
+    <p>Search the public web using a VIN or vehicle description. NYC Auto Pro links to searches but does not claim ownership or reuse rights to third-party images.</p>
+    <form id="photoForm" class="photo-form">
+      <input id="photoQuery" placeholder="VIN, year make model, or listing details">
+      <button class="primary" type="submit">Search Public Photos →</button>
+    </form>
+  </div>
+  <div class="photo-tiles"><div>📷<b>Listing Photos</b></div><div>🏁<b>Auction Photos</b></div><div>🚘<b>Dealer Listings</b></div></div>
+</section>
+
+<section class="sources" id="sources">
+  <div class="section-title">
+    <span>DATA SOURCES & INTEGRATIONS</span><h2>Built for Trusted Data Connections</h2>
+    <p>NYC Auto Pro will only display commercial third-party data when authorized by the provider.</p>
+  </div>
+  <div class="source-grid">
+    <article class="connected"><b>NHTSA / vPIC</b><span>CONNECTED</span><p>VIN decoding and public safety recall campaign data.</p></article>
+    <article><b>CARFAX®</b><span>PENDING AUTHORIZATION</span><p>Commercial integration requires approval from CARFAX Business Development.</p></article>
+    <article><b>NMVTIS</b><span>PLANNED</span><p>Title/brand data to be accessed through an approved NMVTIS provider.</p></article>
+    <article><b>AutoCheck®</b><span>PLANNED</span><p>Connect only under an appropriate commercial data agreement.</p></article>
+    <article><b>Auction Data</b><span>LICENSE REQUIRED</span><p>Auction records and photos only when commercial rights permit display.</p></article>
+    <article><b>Public Web Photos</b><span>LINKS ONLY</span><p>Search links may surface third-party photos; image rights remain with their owners.</p></article>
+  </div>
+  <div class="trademark-note">CARFAX® and AutoCheck® are trademarks of their respective owners. Their names are used only to describe potential integrations. No affiliation, sponsorship or endorsement is implied unless an authorized agreement is completed.</div>
+</section>
+
+<section class="assistant-section">
+  <div class="assistant-copy"><div class="online">ONLINE HELP</div><h2>AI Customer Service & Support</h2><p>Ask about reports, recalls, inspection questions, buying tips and how to use NYC Auto Pro.</p><div class="support-points"><span>✓ Instant help</span><span>✓ Report explanations</span><span>✓ Buying guidance</span><span>✓ General support</span></div></div>
+  <div class="chat-demo" id="chatBox">
+    <div class="chat-head"><span class="ai-badge">AI</span><div><b>NYC Auto Pro Assistant</b><small>Automated buying help</small></div></div>
+    <div class="messages" id="messages"><div class="bot-msg">Hi! I can explain reports, recall data, inspections, title checks and used-car buying steps. I do not replace a mechanic, attorney, dealer or official title/recall source.</div></div>
+    <div class="quick"><button class="ask-ai" data-question="What does a recall mean?">Recall help</button><button class="ask-ai" data-question="Give me a used-car inspection checklist.">Inspection</button><button class="ask-ai" data-question="How do I verify a title?">Title check</button></div>
+    <form id="chatForm"><input id="chatInput" placeholder="Ask a question..."><button class="primary">➤</button></form>
+  </div>
+</section>
+
+<section class="order-section" id="order">
+  <div class="section-title">
+    <span>ORDER PREVIEW</span><h2>Request a Paid Report</h2>
+    <p>Checkout and licensed provider connections will be activated before paid orders are accepted.</p>
+  </div>
+  <form class="order-form" id="orderForm">
+    <div><label>Selected report</label><select id="orderPlan"><option>Basic Vehicle Report - $4.99</option><option selected>Smart Buyer Report - $8.99</option><option>Complete Buyer Report - $14.99</option></select></div>
+    <div><label>VIN</label><input id="orderVin" maxlength="17" required placeholder="17-character VIN"></div>
+    <div><label>Email for report</label><input id="orderEmail" type="email" required placeholder="you@example.com"></div>
+    <label class="agree"><input id="agree" type="checkbox" required> I agree to the <a href="terms.html">Terms of Service</a>, <a href="privacy.html">Privacy Policy</a>, <a href="refund.html">Refund Policy</a> and <a href="disclaimer.html">Disclaimer</a>.</label>
+    <button class="primary full" type="submit">Continue to Checkout (Demo)</button>
+    <small id="orderMsg">Payments are not active in this static demo.</small>
+  </form>
+</section>
+
+<section class="protection">
+  <div class="section-title dark-title"><span>BUYER & BUSINESS PROTECTION</span><h2>Clear Limits, Clear Expectations</h2></div>
+  <div class="protection-grid">
+    <div>🛡️<b>Informational Service</b><p>Reports organize available information and buyer guidance; they do not guarantee vehicle condition or history.</p></div>
+    <div>🔍<b>Independent Verification</b><p>Customers are instructed to verify title, recalls, liens, mileage and vehicle condition independently before buying.</p></div>
+    <div>🤖<b>AI Limitations</b><p>Automated guidance may contain errors and is not legal, financial or mechanical advice.</p></div>
+    <div>📚<b>Third-Party Data</b><p>Availability and accuracy depend on the provider. Missing data does not prove an event did not occur.</p></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-brand">NYC <span>AUTO PRO</span></div><p>Helping buyers make safer, more informed used-car decisions with data, photos and practical guidance.</p></div>
+    <div><b>Quick Links</b><a href="#home">Home</a><a href="#sample">Sample Report</a><a href="#pricing">Pricing</a><a href="#buyer-help">Buying Help</a></div>
+    <div><b>Legal & Support</b><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a><a href="disclaimer.html">Disclaimer</a><a href="mailto:nycautopro@gmail.com">Contact Support</a></div>
+    <div><b>Data Transparency</b><p>NHTSA/vPIC public data is used for free VIN/recall tools. Commercial history and auction data will only be used under valid provider agreements.</p></div>
+  </div>
+  <div class="footer-legal">© 2026 NYC Auto Pro. All rights reserved. Information may come from public and third-party sources. No guarantee of completeness or accuracy. Always independently verify title, ownership, liens, recall status, mileage and mechanical condition before purchase.</div>
+</footer>
+
+<div class="floating-help" id="floatingHelp">AI Help</div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
