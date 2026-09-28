@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NYC Auto Pro | Vehicle Reports & Buyer Guidance</title>
-<meta name="description" content="Professional used-vehicle reports, recall findings, history data, photo research, market guidance and buyer support.">
+<meta name="description" content="Professional used-vehicle reports, free VIN decoding, recall campaign research, photo research, market guidance and buyer support.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://vpic.nhtsa.dot.gov https://api.nhtsa.gov; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="logo-mark.svg">
 </head>
@@ -17,6 +19,7 @@
   <button class="menu" id="menuBtn" aria-label="Menu">☰</button>
   <nav id="mainNav">
     <a href="#home">Home</a>
+    <a href="#free-check">Free VIN & Recall</a>
     <a href="#report">Sample Report</a>
     <a href="#pricing">Pricing</a>
     <a href="#buyer-help">Buying Help</a>
@@ -32,20 +35,20 @@
     <div class="hero-copy">
       <div class="eyebrow">PROFESSIONAL VEHICLE REPORTS & BUYER GUIDANCE</div>
       <h1>Buy Smarter.<br><span>Drive Safer.</span></h1>
-      <p>Enter a VIN, choose a report, and unlock vehicle information, recall findings, public-photo research, market guidance and buyer analysis after purchase.</p>
+      <p>Start with a free VIN decode and recall-campaign check. Then choose a paid report for deeper history research, photos, market guidance and buyer analysis.</p>
       <div class="hero-pills">
         <span>✓ Vehicle Data</span><span>✓ Recall Findings</span><span>✓ Photo Research</span><span>✓ Buyer Guidance</span>
       </div>
       <form id="vinForm" class="vinbox">
         <input id="vin" maxlength="17" placeholder="Enter 17-character VIN">
-        <button class="btn primary" type="submit">See Report Options</button>
+        <button class="btn primary" type="submit">Check VIN Free</button>
       </form>
-      <small class="secure">🔒 Vehicle-specific information is unlocked only after purchase.</small>
+      <small class="secure">✓ Free VIN decode & recall-campaign research • No credit card required</small>
     </div>
     <div class="hero-side">
       <div class="glass-card">
-        <div><i>✓</i><span><b>Vehicle Data</b><small>VIN details & specifications</small></span></div>
-        <div><i>✓</i><span><b>Recall Findings</b><small>Included in paid reports</small></span></div>
+        <div><i>✓</i><span><b>Free VIN Decode</b><small>NHTSA / vPIC vehicle specifications</small></span></div>
+        <div><i>✓</i><span><b>Free Recall Research</b><small>NHTSA campaigns by year / make / model</small></span></div>
         <div><i>✓</i><span><b>Photo Research</b><small>Public and licensed sources</small></span></div>
         <div><i>✓</i><span><b>Buyer Guidance</b><small>Inspection & negotiation support</small></span></div>
       </div>
@@ -53,11 +56,66 @@
   </div>
 </section>
 
+
+<section class="free-check" id="free-check">
+  <div class="free-wrap">
+    <div class="free-copy">
+      <span class="eyebrow">FREE VEHICLE SAFETY TOOLS</span>
+      <h2>Free VIN Decode & Recall Check</h2>
+      <p>Use official NHTSA public data to identify basic vehicle specifications and recall campaigns that match the decoded year, make and model.</p>
+      <div class="free-security">
+        <span>✓ No payment required</span>
+        <span>✓ No API key exposed</span>
+        <span>✓ Official public sources</span>
+        <span>✓ VIN is not stored by this page</span>
+      </div>
+      <div class="free-warning">
+        <b>Recall notice:</b> campaign results are matched by year, make and model. They do not prove that this exact VIN is affected, repaired, open or closed. Verify VIN-specific status with NHTSA or the manufacturer.
+      </div>
+    </div>
+    <div class="free-tool-card">
+      <form id="freeVinForm" class="free-vin-form" autocomplete="off" novalidate>
+        <label for="freeVin">Enter VIN</label>
+        <div class="free-vin-row">
+          <input id="freeVin" maxlength="17" minlength="17" inputmode="text" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="17-character VIN" aria-describedby="freeVinHelp">
+          <button class="btn primary" type="submit">Decode & Check Recalls</button>
+        </div>
+        <small id="freeVinHelp">17 characters. Letters I, O and Q are not used in standard VINs.</small>
+      </form>
+      <div id="freeStatus" class="free-status" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div id="freeResults" class="free-results hidden">
+    <article class="free-result-card">
+      <div class="result-heading">
+        <div><span class="result-kicker">FREE VIN DECODE</span><h3 id="vehicleTitle">Vehicle Information</h3></div>
+        <span class="source-badge">NHTSA vPIC</span>
+      </div>
+      <div id="vinFacts" class="fact-grid"></div>
+      <p class="result-note">Decoded specifications come from manufacturer-submitted information available through NHTSA vPIC. Some fields may be blank or unavailable.</p>
+    </article>
+
+    <article class="free-result-card">
+      <div class="result-heading">
+        <div><span class="result-kicker">FREE RECALL RESEARCH</span><h3>Matching Recall Campaigns</h3></div>
+        <span class="source-badge">NHTSA</span>
+      </div>
+      <div id="recallSummary" class="recall-summary"></div>
+      <div id="recallList" class="recall-list"></div>
+      <div class="recall-disclaimer">
+        <b>Important:</b> these are campaigns returned for the decoded year, make and model. This is not a VIN-specific open-recall status check. Always confirm the exact VIN with NHTSA or the manufacturer before relying on the result.
+      </div>
+      <a class="btn secondary nhtsa-link" href="https://www.nhtsa.gov/recalls" target="_blank" rel="noopener noreferrer">Verify VIN at NHTSA →</a>
+    </article>
+  </div>
+</section>
+
 <section class="trustbar">
   <div><span>🚘</span><b>Vehicle Data</b><small>Specs, VIN & identifiers</small></div>
   <div><span>🧾</span><b>History Data</b><small>When licensed sources connect</small></div>
   <div><span>📷</span><b>Photo Research</b><small>Listing & auction sources</small></div>
-  <div><span>⚠️</span><b>Recall Review</b><small>Included after purchase</small></div>
+  <div><span>⚠️</span><b>Free Recall Check</b><small>NHTSA campaign research</small></div>
   <div><span>📊</span><b>Market Guidance</b><small>Pricing context</small></div>
   <div><span>🛡️</span><b>Buyer Protection</b><small>Independent verification</small></div>
 </section>
@@ -103,8 +161,8 @@
       <h3>Basic Vehicle Report</h3>
       <strong>$4.99</strong>
       <ul>
-        <li>VIN decode & vehicle details</li>
-        <li>Recall findings</li>
+        <li>Free VIN decode & recall results included</li>
+        <li>Organized vehicle-detail summary</li>
         <li>Basic title/history fields when available</li>
         <li>Equipment/spec review</li>
         <li>Buyer checklist</li>
@@ -144,7 +202,7 @@
   <div class="title">
     <span>AI CUSTOMER SERVICE & BUYING HELP</span>
     <h2>Support Before and After the Report</h2>
-    <p>General questions are free. Vehicle-specific findings stay inside the purchased report.</p>
+    <p>Free VIN decoding and recall-campaign research are available to everyone. Deeper history, risk analysis and premium research stay inside paid reports.</p>
   </div>
   <div class="helpgrid">
     <article><span>💬</span><h3>Seller Questions</h3><p>General questions to ask before buying.</p><button class="linkbtn aiq" data-q="What should I ask a used-car seller?">Ask AI</button></article>
@@ -191,8 +249,8 @@
   <div class="ai-copy">
     <span class="online">ONLINE HELP</span>
     <h2>NYC Auto Pro AI Assistant</h2>
-    <p>General support for reports, buying steps, inspections, titles and negotiations. Vehicle-specific results stay behind the paid report.</p>
-    <div class="checks"><span>✓ General support</span><span>✓ Report explanations</span><span>✓ Buying guidance</span><span>✓ No free VIN results</span></div>
+    <p>General support for reports, buying steps, inspections, titles and negotiations. Free VIN/recall results are public-data tools; premium history findings stay behind paid reports.</p>
+    <div class="checks"><span>✓ General support</span><span>✓ Report explanations</span><span>✓ Buying guidance</span><span>✓ Free VIN & recall tools</span></div>
   </div>
   <div class="chat">
     <div class="chathead"><span>AI</span><div><b>NYC Auto Pro Assistant</b><small>Automated customer support</small></div></div>
@@ -206,7 +264,7 @@
   <div class="title">
     <span>CHECKOUT PREVIEW</span>
     <h2>Request Your Report</h2>
-    <p>Payment and licensed data connections will be activated before paid launch.</p>
+    <p>Free VIN and recall tools are active. Payment and licensed commercial-data connections will be activated before paid launch.</p>
   </div>
   <form class="orderform" id="orderForm">
     <label>Selected report<select id="plan"><option>Basic Vehicle Report - $4.99</option><option selected>Smart Buyer Report - $8.99</option><option>Complete Buyer Report - $14.99</option></select></label>
@@ -235,7 +293,7 @@
 <footer>
   <div class="footergrid">
     <div><div class="footbrand">NYC <span>AUTO PRO</span></div><p>Vehicle information, buyer guidance and professional report services.</p></div>
-    <div><b>Quick Links</b><a href="#home">Home</a><a href="#report">Sample Report</a><a href="#pricing">Pricing</a><a href="#buyer-help">Buying Help</a></div>
+    <div><b>Quick Links</b><a href="#home">Home</a><a href="#free-check">Free VIN & Recall</a><a href="#report">Sample Report</a><a href="#pricing">Pricing</a><a href="#buyer-help">Buying Help</a></div>
     <div><b>Legal & Support</b><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a><a href="disclaimer.html">Disclaimer</a><a href="mailto:nycautopro@gmail.com">Contact Support</a></div>
     <div><b>Data Transparency</b><p>Commercial data is displayed only under valid agreements. Public sources and third-party data can be incomplete or delayed.</p></div>
   </div>
