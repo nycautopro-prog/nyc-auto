@@ -1,10 +1,3 @@
-document.getElementById("vinForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  const vin = document.getElementById("vin").value.trim().toUpperCase();
-  const status = document.getElementById("status");
-  if(vin.length !== 17){
-    status.textContent = "Please enter a valid 17-character VIN.";
-    return;
-  }
-  status.textContent = "VIN received. Production checkout and report processing will be connected next.";
-});
+function validVIN(v){return /^[A-HJ-NPR-Z0-9]{17}$/.test(v)}
+document.querySelector("#vin").addEventListener("submit",e=>{e.preventDefault();const v=document.querySelector("#vinInput").value.trim().toUpperCase(),m=document.querySelector("#msg");m.textContent=validVIN(v)?"VIN accepted. Production checkout and licensed data connections will be activated before paid launch.":"Please enter a valid 17-character VIN.";});
+document.querySelector("#recallForm").addEventListener("submit",e=>{e.preventDefault();const v=document.querySelector("#recallVin").value.trim().toUpperCase(),m=document.querySelector("#recallMsg");m.textContent=validVIN(v)?"VIN accepted. The production version will return recall results from the connected recall-data workflow.":"Please enter a valid 17-character VIN.";});

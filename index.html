@@ -1,70 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NYC Auto AI | Know More Before You Buy</title>
-  <meta name="description" content="AI-powered used-car buyer reports, VIN checks and buying guidance.">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header class="header">
-  <div class="logo">🚗 <span>NYC Auto AI</span></div>
-  <nav>
-    <a href="#how">How It Works</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#vin">VIN Check</a>
-  </nav>
-</header>
-
-<main>
-<section class="hero">
-  <div class="badge">SMARTER USED-CAR BUYING</div>
-  <h1>Know more<br>before you buy.</h1>
-  <p>Enter a VIN and get an easy-to-understand buyer report designed to help you ask better questions and spot information that deserves attention.</p>
-  <a class="button" href="#vin">Check a VIN</a>
-</section>
-
-<section id="how" class="section">
-  <h2>How it works</h2>
-  <div class="cards">
-    <div class="card"><b>1. Enter the VIN</b><p>Provide the vehicle VIN and basic listing information.</p></div>
-    <div class="card"><b>2. We analyze the data</b><p>Available vehicle and safety information is organized and explained in plain language.</p></div>
-    <div class="card"><b>3. Get buyer guidance</b><p>Review questions to ask the seller and items to verify before paying.</p></div>
-  </div>
-</section>
-
-<section id="pricing" class="section">
-  <h2>Choose your report</h2>
-  <div class="pricing">
-    <div class="price-card"><h3>Basic VIN Check</h3><div class="price">$9.99</div><p>VIN information and available safety/recall findings.</p><a class="button" href="#vin">Start</a></div>
-    <div class="price-card featured"><h3>AI Buyer Report</h3><div class="price">$19.99</div><p>Plain-language analysis, questions to ask and red-flag areas to investigate.</p><a class="button" href="#vin">Start</a></div>
-    <div class="price-card"><h3>Complete Buyer Package</h3><div class="price">$29.99</div><p>Buyer report plus listing/price review and inspection checklist.</p><a class="button" href="#vin">Start</a></div>
-  </div>
-</section>
-
-<section id="vin" class="section form-section">
-  <h2>Start your VIN check</h2>
-  <p class="muted">Online checkout and licensed vehicle-history data are connected during the production launch.</p>
-  <form id="vinForm">
-    <label>VIN
-      <input id="vin" name="vin" maxlength="17" minlength="17" placeholder="17-character VIN" required>
-    </label>
-    <label>Email
-      <input id="email" name="email" type="email" placeholder="you@email.com" required>
-    </label>
-    <button class="button" type="submit">Continue</button>
-    <div id="status"></div>
-  </form>
-</section>
-
-<section class="section">
-  <h2>Built for smarter buying</h2>
-  <p>NYC Auto AI is an information and buyer-guidance service. A report is not a guarantee that a vehicle is mechanically sound, accident-free, or free of undisclosed problems. Always verify important information and consider an independent inspection before purchasing.</p>
-</section>
-</main>
-
-<footer>© 2026 NYC Auto AI · Used Vehicle Information & Buyer Advisory Service</footer>
-<script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NYC Auto Pro | Smart Vehicle Reports</title><link rel="stylesheet" href="styles.css"></head><body>
+<header><div class="logo">NYC <span>AUTO PRO</span><small>SMART VEHICLE REPORTS & BUYER GUIDANCE</small></div><nav><a href="#home">Home</a><a href="#sample">Sample Report</a><a href="#pricing">Pricing</a><a href="#how">How It Works</a></nav><a class="btn" href="#vin">Get Your Report</a></header>
+<section class="hero" id="home"><div><b class="blue">SMARTER USED-CAR BUYING</b><h1>Buy Smarter.<br>Drive Safer.</h1><p>Get vehicle information, clear analysis and buyer guidance before you make a purchase.</p><div class="checks">✓ Vehicle Data　✓ Recall Check　✓ Buyer Guidance</div><form id="vin"><input id="vinInput" maxlength="17" placeholder="Enter 17-character VIN"><button>Get Report</button></form><small id="msg">Secure • Fast • Easy to understand</small></div><div class="visual"><div class="car">🚘</div><aside><b>Professional Reports</b><br>Vehicle information<br>Seller questions<br>Items to verify<br>Inspection guidance</aside></div></section>
+<section class="sample" id="sample"><div class="intro"><div><b class="blue">SEE WHAT YOU GET</b><h2>Sample Report</h2><p>A clean report designed to make vehicle information easier to understand.</p></div></div><div class="reports">
+<article><b>NYC <span>AUTO PRO</span></b><small>VEHICLE REPORT</small><div class="vehicle">🚙</div><h3>2023 BMW M440i xDrive</h3><p>VIN: WBA13AR0XPCM17068</p><em>SAMPLE REPORT</em></article>
+<article><h3>Vehicle Information</h3><p>Make　<b>BMW</b></p><p>Model　<b>M440i xDrive</b></p><p>Year　<b>2023</b></p><p>Body　<b>Coupe</b></p><p>Engine　<b>3.0L 6-cylinder</b></p><small>Example layout. Verify live data before purchase.</small></article>
+<article><h3>Buyer Review</h3><p>✓ VIN identity</p><p>○ Recall lookup</p><p>○ Title/history verification</p><p>○ Independent inspection</p><small>Confirmed and unavailable information should always be distinguished.</small></article>
+<article><h3>Questions to Ask</h3><p>Any prior collision repairs?</p><p>Can I see maintenance records?</p><p>Is the title in the seller's name?</p><p>Can I arrange an inspection?</p><em>BUYER GUIDANCE</em></article></div></section>
+<section class="pricing" id="pricing"><div class="title"><b class="blue">SIMPLE PRICING</b><h2>Choose Your Report</h2></div><div class="plans"><article><h3>Basic VIN Check</h3><strong>$9.99</strong><p>Vehicle identification<br>Recall information<br>Basic buyer checklist</p><a href="#vin">Start</a></article><article class="hot"><label>MOST POPULAR</label><h3>AI Buyer Report</h3><strong>$19.99</strong><p>Everything in Basic<br>Plain-language analysis<br>Seller questions & red flags</p><a class="btn" href="#vin">Start</a></article><article><h3>Complete Buyer Package</h3><strong>$29.99</strong><p>Everything in AI Report<br>Listing/price review<br>Inspection checklist</p><a href="#vin">Start</a></article></div></section>
+<section class="how" id="how"><div class="title"><b class="blue">FAST & SIMPLE</b><h2>How It Works</h2></div><div class="steps"><article><i>1</i><h3>Enter VIN</h3><p>Submit the 17-character VIN.</p></article><article><i>2</i><h3>We Analyze</h3><p>Available data is organized and explained.</p></article><article><i>3</i><h3>Get Your Report</h3><p>Review findings and buyer guidance.</p></article></div></section>
+<footer><b>NYC <span>AUTO PRO</span></b><p>Vehicle information & buyer advisory service.</p><small>Reports are informational and do not guarantee vehicle condition, title status, or absence of undisclosed issues. Verify important records and obtain an independent inspection before purchase.</small></footer><script src="app.js"></script></body></html>
