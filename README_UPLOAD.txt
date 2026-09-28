@@ -19,3 +19,6 @@ IMPORTANT:
 - CARFAX / ClearVin / AutoCheck / NMVTIS / auction data are not connected yet.
 - Do not advertise those providers as active until commercial agreements are approved.
 - Vehicle-specific results must be generated server-side only after payment confirmation.
+
+
+GitHub write access confirmed for NYC Auto Pro maintenance.
